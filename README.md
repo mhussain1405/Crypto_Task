@@ -4,6 +4,9 @@ Make sure you have v22.18.0 of node installed on your system to avoid incompatib
 
 Need to use ^3.4.3 version of tailwind css for this project. Latest version was found to be unstable while creating this project.
 
+**IMPORTANT** 
+USE MY PACKAGE.JSON SINCE IT HAS ALL THE NECESSARY VERSIONS FOR CORRECT WORKING OF THE CODE.
+
 ### 1. Create a New React Application
 
 First, create a new React project using Vite. Open your terminal and run the following command:
@@ -31,13 +34,13 @@ cd cryptopulse-app
 Next, install Tailwind CSS and its peer dependencies, then generate the configuration files.
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
+npm install @tailwindcss/postcss postcss autoprefixer
 ```
 ### 4. Configure Tailwind CSS
 
 You now need to configure Tailwind to scan your project files and enable dark mode.
 
-**A) Edit `tailwind.config.js`:**
+**A) Create `tailwind.config.js`:** in root directory
 Open the `tailwind.config.js` file and replace its content with the following:
 
 ```js
@@ -59,7 +62,18 @@ export default {
 }
 ```
 
-**B) Edit `src/index.css`:**
+**B) Create `postcss.config.js`:** in root directory
+
+Open the `postcss.config.js` file and replace its content with the following:
+
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+**C) Edit `src/index.css`:**
 Open the `src/index.css` file, delete all of its existing content, and add these three lines:
 
 ```css
@@ -78,7 +92,7 @@ npm install react-chartjs-2 chart.js @headlessui/react
 
 ### 6. Update the Main HTML File
 
-Open the `index.html` file in the root of your project. Add the CDN links for Font Awesome (for icons) and the "Inter" Google Font inside the `<head>` section.
+Open the `index.html` file in the root of your project. Add the CDN links for Font Awesome (for icons) and the "Inter" Google Font inside the `<head>` section after the meta tags.
 
 ```html
 <head>
