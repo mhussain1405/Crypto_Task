@@ -4,7 +4,8 @@ Make sure you have v22.18.0 of node installed on your system to avoid incompatib
 
 Need to use ^3.4.3 version of tailwind css for this project. Latest version was found to be unstable while creating this project.
 
-**IMPORTANT** 
+**IMPORTANT:** 
+
 USE MY PACKAGE.JSON SINCE IT HAS ALL THE NECESSARY VERSIONS FOR CORRECT WORKING OF THE CODE.
 
 ### 1. Create a New React Application
